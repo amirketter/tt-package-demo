@@ -4,10 +4,14 @@
   "description": "",
   "keywords": [],
   "homepage": "",
+  "main": "dist/index.js",
   "author": "Amir Ketter",
   "scripts": {
     "build": "tsc",
-    "format": "prettier --write ."
+    "dev": "vitest",
+    "test": "vitest run",
+    "format": "prettier --write .",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm"
   },
   "repository": {
     "type": "git",
@@ -19,7 +23,9 @@
   "type": "module",
   "license": "MIT",
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.4",
     "prettier": "^3.5.2",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.6"
   }
 }
